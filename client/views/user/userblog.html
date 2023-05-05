@@ -1,0 +1,33 @@
+
+<div class="container-fluid">
+   
+        <div class="row p-4 m-2">
+            <div class="col-md mt-2" ng-repeat="blog in data">
+                <div class="card m-3 shadow border-0" style="height: 200px;width: 24rem;" >
+                    <div class="card-body">
+                        <div class="card-design rounded-circle border-0 shadow"></div>
+                        <div class="small-card-design rounded-circle border-0 shadow">  </div>
+                        <div ng-click="deleteBlog(blog._id)" class="small-card-bottom-design rounded-circle border-0 shadow"> <i class="fa fa-trash mt-3 ms-2 text-danger"></i> </div>
+                        <a href="#!read-blog/{{blog._id}}" class="card-title text-decoration-none h5 card-title"> {{blog.title}} </a>
+                        <p class="card-text mt-3 fs-6 text-align-justify"> {{ blog.description | limitTo: 100 }}...</p>
+                    </div>
+                    <p class="mx-3 text-secondary"> posted By : {{blog.postedBy.name}}</p>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

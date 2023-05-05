@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="card border-0 rounded-5 shadow-lg w-100 bg-light mt-5 position-relative" style=height:750px;>
+    <div class="circle position-absolute top-0 start-0 rounded-circle border-0 m-4"></div>
+    <div class="small_top_circle position-absolute top-0 start-0 rounded-circle"></div>
+
+    <div class="circle position-absolute top-0 end-0 rounded-circle border-0 m-4"></div>
+    <div class="small_top_circle position-absolute top-0 end-0 rounded-circle"></div>
+
+    <div class="mt-5 position-relative">
+
+      <h1 class="h2 text-center mt-5 mb-2">Welcome Back </h1>
+      <div class="text-center text-secondary mb-5">Login To continue</div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md">
+          <form name="loginForm" ng-Submit="loginUser(email,password)">
+            <div class="mb-3">
+              <!-- <label class="form-label">Email address</label> -->
+              <input type="email" class="w-100 p-2 input-box" name="email" ng-model="email" required
+                placeholder="Enter Email" />
+              <span style="color:red" ng-show="loginForm.email.$dirty && loginForm.email.$invalid">
+                <span ng-show="loginForm.email.$error.required">Email is required.</span>
+                <span ng-show="loginForm.email.$error.email">Please Enter valid Email</span>
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <!-- <label class="form-label">Password</label> -->
+              <input type="password" class="w-100 p-2 input-box mt-2" name="password" ng-model="password" minlength="6"
+                placeholder="Enter Password" />
+              <span style="color:red" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+                <span ng-show="loginForm.password.$error.required">Password is required.</span>
+                <span ng-show="loginForm.password.$error.minlength">Please Enter minimum. 6 digit.</span>
+              </span>
+            </div>
+
+            <p class="text-secondary text-center"> forgot password?</p>
+
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn text-center text-white w-75 mt-3">Login</button>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="#!register" class="w-75 btn btn-outline-danger mt-4">Sign Up</a>
+            </div>
+
+          </form>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+
+    </div>
+
+    <div class="circle position-absolute bottom-0 start-0 rounded-circle border-0 m-4"></div>
+    <div class="small_bottom_circle position-absolute  bottom-0 start-0 rounded-circle"></div>
+
+    <div class="circle position-absolute bottom-0 end-0 rounded-circle border-0 m-4"> </div>
+    <div class="small_bottom_circle position-absolute  bottom-0 end-0 rounded-circle"></div>
+
+
+  </div>
+</div>

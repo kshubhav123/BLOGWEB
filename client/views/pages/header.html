@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg bg-white shadow p-3" ng-controller="ProfileController">
+  <div class="container-fluid">
+    <a class="navbar-brand text-danger fw-bold fs-4" href="#" style="color:red !important;"> BLOGWEB </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" ng-show="!data">
+        <li class="nav-item ms-3 mb-1"> <a href="#!" class="text-dark text-decoration-none"> Home </a> </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" ng-show="admin">
+        <li class="nav-item ms-3 mb-1"> <a href="#!" class="text-dark text-decoration-none"> Home </a> </li>
+        <li class="nav-item ms-3 mb-1"> <a href="#!one" class="text-dark active text-decoration-none"> One</a></li>
+        <li class="nav-item ms-3 mb-1"> <a href="#!profile" class="text-dark active text-decoration-none"> Profile</a></li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" ng-show="user">
+        <li class="nav-item ms-3 mb-1"> <a href="#!" class="text-dark text-decoration-none"> Home </a> </li>
+        <li class="nav-item ms-3 mb-1"> <a href="#!add-blog" class="text-dark  text-decoration-none"> Add-Blog</a></li>
+        <li class="nav-item ms-3 mb-1"> <a href="#!" class="text-dark  text-decoration-none "> Blog-List</a>
+        </li>
+        <li class="nav-item ms-3 mb-1"> <a href="#!listbyUser" class="text-dark text-decoration-none">OwnBlog</a></li>
+        <li class="nav-item ms-3 mb-1"> <a href="#!profile" class="text-dark  text-decoration-none"> Profile</a></li>
+      </ul>
+      <form class="d-flex" role="search">
+        <div>
+          <div ng-show="data">
+            <button ng-click="logout()" class="btn text-white fw-bold text-decoration-none"> logout </button>
+          </div>
+          <div ng-show="!data">
+            <a href="#!login" class="text-decoration-none text-dark"><i class="fa-solid fa-right-to-bracket fs-5" ></i></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="card border-0 rounded-5 shadow-lg w-100 bg-light mt-5 position-relative" style=height:750px;>
+    <div class="circle position-absolute top-0 start-0 rounded-circle border-0 m-4"></div>
+    <div class="small_top_circle position-absolute top-0 start-0 rounded-circle"></div>
+
+    <div class="circle position-absolute top-0 end-0 rounded-circle border-0 m-4"></div>
+    <div class="small_top_circle position-absolute top-0 end-0 rounded-circle"></div>
+
+
+    <div class="mt-5 position-relative">
+      <h1 class="h2 text-center mt-5 mb-2">Welcome Back </h1>
+      <div class="text-center text-secondary mb-5">Create Your Account</div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md">
+          {{error }}
+          <form name="registerForm" ng-Submit="registerUser(name,email,mobile,password, cnfrm_pass)">
+            <div class="mb-3">
+              <!-- <label class="form-label">Name</label> -->
+              <input type="text" name="name" ng-model="name" class="w-100 p-2 input-box" required placeholder="Enter Name"/>
+              <span style="color:red" class="m-1" ng-show="registerForm.name.$dirty && registerForm.name.$invalid">
+                <span ng-show="registerForm.name.$error.required">Name is required.</span>
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <!-- <label class="form-label">Email</label> -->
+              <input type="email" class="w-100 p-2 input-box" name="email" ng-model="email" required placeholder="Enter Email"/>
+              <span style="color:red" ng-show="registerForm.email.$dirty && registerForm.email.$invalid">
+                <span ng-show="registerForm.email.$error.required">Email is required.</span>
+                <span ng-show="registerForm.email.$error.email">Invalid email address.</span>
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <!-- <label class="form-label">Mobile No.</label> -->
+              <input type="mobile" class="w-100 p-2 input-box" name="mobile" ng-model="mobile" minlength="10" maxlength="10" required placeholder="Enter Mobile Number"/>
+              <span style="color:red" ng-show="registerForm.mobile.$dirty && registerForm.mobile.$invalid">
+                <span ng-show="registerForm.mobile.$error.required">Mobile No. is required.</span>
+                <span ng-show="registerForm.mobile.$error.minlength">Please Enter 10 Digit Number.</span>
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <!-- <label class="form-label">Password</label> -->
+              <input type="password" class="w-100 p-2 input-box" name="password" ng-model="password" minlength="6" required placeholder="Enter Password"/>
+              <span style="color:red" ng-show="registerForm.password.$dirty && registerForm.password.$invalid">
+                <span ng-show="registerForm.password.$error.required">Password is required.</span>
+                <span ng-show="registerForm.password.$error.minlength">Please Enter min. 6 digit.</span>
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <!-- <label class="form-label">Confirm Password</label> -->
+              <input type="password" class="w-100 p-2 input-box" name="cnfrm_pass" ng-model="cnfrm_pass" required placeholder="Enter Confirm Password"/>
+              <span style="color:red" ng-show="registerForm.cnfrm_pass.$dirty && registerForm.cnfrm_pass.$invalid">
+                <span ng-show="registerForm.cnfrm_pass.$error.required">Confirm Password is required.</span>
+                <span ng-show="registerForm.cnfrm_pass.$error.minlength">Please Enter minimum. 6 digit.</span>
+              </span>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn text-center text-white w-75 mt-3">Sign Up</button>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="#!login" class="w-75 btn btn-outline-danger mt-4">Sign in</a>
+            </div>
+
+          </form>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+
+
+    </div>
+
+    <div class="circle position-absolute bottom-0 start-0 rounded-circle border-0 m-4"></div>
+    <div class="small_bottom_circle position-absolute  bottom-0 start-0 rounded-circle"></div>
+
+    <div class="circle position-absolute bottom-0 end-0 rounded-circle border-0 m-4"> </div>
+    <div class="small_bottom_circle position-absolute  bottom-0 end-0 rounded-circle"></div>
+
+
+  </div>
+</div>

@@ -1,0 +1,83 @@
+.circle {
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    background-color: red;
+}
+
+
+.small_top_circle {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    margin-top: 10%;
+    margin-left: 11%;
+    margin-right: 11%;
+}
+
+.small_bottom_circle {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    margin-bottom: 10%;
+    margin-left: 11%;
+    margin-right: 11%;
+}
+
+button {
+    background-color: red !important;
+}
+
+.card-title {
+    color: red;
+}
+
+.card-design {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    background-color: red;
+    position: absolute;
+    right: 20px;
+    background: transparent;
+}
+
+
+.small-card-design {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    background-color: red;
+    position: absolute;
+    right: 20px;
+    background: transparent;
+}
+
+.small-card-bottom-design {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: red;
+    position: absolute;
+    bottom: 12px;
+    right: 22px;
+    background: transparent;
+}
+
+.input-box {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius:5px;
+}        
+
+.input-box:focus {
+    border:hidden;
+    border-bottom: solid 3px red !important;
+    border-radius: 0px;
+    transition: 2.0s;
+    background-color: transparent;
+
+}

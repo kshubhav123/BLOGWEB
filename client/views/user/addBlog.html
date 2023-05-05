@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="card border-0 rounded-5 shadow-lg w-100 bg-light mt-5 position-relative" style=height:750px;>
+        <div class="circle position-absolute top-0 start-0 rounded-circle border-0 m-4"></div>
+        <div class="small_top_circle position-absolute top-0 start-0 rounded-circle"></div>
+
+        <div class="circle position-absolute top-0 end-0 rounded-circle border-0 m-4"></div>
+        <div class="small_top_circle position-absolute top-0 end-0 rounded-circle"></div>
+
+        <div class="mt-5 position-relative">
+
+            <h1 class="h2 text-center mt-5 mb-5">Create Your Blog </h1>
+
+            <div class="row">
+                <div class="col-md-4"></div>
+
+                <div class="col-md">
+                    <form name="blogForm" ng-Submit="createBlog(title,description)">
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Title</label>
+                            <input type="text" class="form-control" name="title" ng-model="title" required />
+                            <span style="color:red" class="m-1"
+                                ng-show="blogForm.title.$dirty && blogForm.title.$invalid">
+                                <span ng-show="blogForm.title.$error.required">Title is required.</span>
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Description</label>
+                            <textarea class="form-control" name="description" ng-model="description" rows="6" cols="50"
+                                minlength="50" style="resize: none;" required></textarea>
+                            <span style="color:red"
+                                ng-show="blogForm.description.$dirty && blogForm.description.$invalid">
+                                <span ng-show="blogForm.description.$error.required">Description is required.</span>
+                                <span ng-show="blogForm.description.$error.minlength">Please Enter 30 words into
+                                    description.</span>
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <div class="text-success fw-bold">{{msg}}</div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button showNotify type="submit" class="btn text-center text-white w-75 mt-3">Create
+                                Blog</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+
+
+        </div>
+
+        <div class="circle position-absolute bottom-0 start-0 rounded-circle border-0 m-4"></div>
+        <div class="small_bottom_circle position-absolute  bottom-0 start-0 rounded-circle"></div>
+
+        <div class="circle position-absolute bottom-0 end-0 rounded-circle border-0 m-4"> </div>
+        <div class="small_bottom_circle position-absolute  bottom-0 end-0 rounded-circle"></div>
+
+
+    </div>
+</div>

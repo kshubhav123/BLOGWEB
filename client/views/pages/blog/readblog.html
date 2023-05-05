@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <h2 class="text-start text-danger m-5 mb-2">{{data.title}}</h2>
+    </div>
+    <hr>
+    <div class="row">
+        <h4 class="text-start fw-normal lh-base mx-5 my-2">{{data.description}}</h4>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row m-4">
+        <!-- <div class="col-1"></div> -->
+        <div class="col-md-4">
+            <form ng_name="commentForm" ng-Submit="commentBox(text,email)">
+                <div class="mb-3">
+                    <input type="text" class="form-control rounded-0 border-0 border-bottom" name="text" ng-model="text"
+                        placeholder="Enter Your Comment" />
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control rounded-0 border-0 border-bottom" name="email"
+                        ng-model="email" placeholder="Enter Your Email" />
+                </div>
+                <button type="submit" class="btn mx-2 mt-1 mb-3 text-center btn-outline-danger text-white fw-bold">Comment</button>
+            </form>
+        </div>
+        <!-- <div class="col-md-1"></div> -->
+    </div>
+</div>
+
+
+<div class="container" ng-controller="CommentListController">
+    <h5 class="mx-4 mt-4">Comment List</h5>
+    <hr />
+
+    <div ng-if="data==false" class="mx-4 text-secondary">
+        Please Type Your Comment here !
+    </div>
+
+    <div ng-repeat="comment in data">
+        <div class="mx-5 px-2 fs-6 fw-bold">{{comment.text}} </div>
+        <div class="row mx-5 mb-3 px-2 text-secondary">{{comment.email}} </div>
+    </div>
+
+    <hr>
+</div>
+
+
