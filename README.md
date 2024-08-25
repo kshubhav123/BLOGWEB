@@ -1,9 +1,3 @@
-# BLOGWEB
-
-- Node Js 
-- Express Js 
-- Mongo Db
-- Angular Js
 
 Login
 
